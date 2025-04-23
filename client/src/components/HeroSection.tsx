@@ -23,21 +23,14 @@ export default function HeroSection() {
             The AI-powered platform that helps mission-driven organizations craft 
             compelling grant applications that reflect their authentic voice.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <div className="flex justify-center mb-12">
             <Button
               asChild
               size="lg"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl font-montserrat text-lg"
+              id="demo"
+              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-5 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl font-montserrat text-xl"
             >
-              <a href="#join-waitlist">Join Waitlist</a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="bg-white text-primary-500 border border-primary-200 hover:border-primary-300 font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-md hover:shadow-lg font-montserrat text-lg"
-            >
-              <a href="#how-it-works">See How It Works</a>
+              <a href="#demo">Try Demo</a>
             </Button>
           </div>
 

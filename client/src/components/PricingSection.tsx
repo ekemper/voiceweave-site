@@ -139,7 +139,7 @@ function PricingCard({ plan, index }: { plan: PricingPlan, index: number }) {
               : "bg-white border border-primary-500 text-primary-500 hover:bg-primary-50"
           } font-medium py-2 px-6 rounded-full transition-colors`}
         >
-          <a href="#join-waitlist">{plan.buttonText}</a>
+          <a href="#demo">{plan.buttonText}</a>
         </Button>
       </div>
     </div>

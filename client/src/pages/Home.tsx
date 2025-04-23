@@ -6,7 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import PricingSection from "@/components/PricingSection";
 import FaqSection from "@/components/FaqSection";
-import WaitlistForm from "@/components/WaitlistForm";
+import DemoSection from "@/components/DemoSection";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 
@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     // Add smooth scrolling to all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
         e.preventDefault();
         
         const href = this.getAttribute('href');
@@ -43,7 +43,7 @@ export default function Home() {
         <Testimonials />
         <PricingSection />
         <FaqSection />
-        <WaitlistForm />
+        <DemoSection />
       </main>
       <Footer />
     </div>

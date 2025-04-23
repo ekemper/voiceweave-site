@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-white pt-16 pb-8">
@@ -30,8 +32,8 @@ export default function Footer() {
               <li><a href="#features" className="text-neutral-400 hover:text-white transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="text-neutral-400 hover:text-white transition-colors">How It Works</a></li>
               <li><a href="#pricing" className="text-neutral-400 hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#demo" className="text-neutral-400 hover:text-white transition-colors">Try Demo</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Security</a></li>
             </ul>
           </div>
 
@@ -49,7 +51,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">About Us</a></li>
+              <li><Link href="/about" className="text-neutral-400 hover:text-white transition-colors">About Us</Link></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Press</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition-colors">Contact</a></li>
