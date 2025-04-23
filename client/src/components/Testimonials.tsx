@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     testimonial: "VoiceWeave transformed our approach to grant writing. We secured a $250,000 grant that previously seemed out of reach. The platform helped us craft a narrative that perfectly captured our community's voice and vision.",
     results: "3 major grants secured in 6 months",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
   },
   {
     name: "David Chen",
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     testimonial: "The time savings alone make VoiceWeave invaluable. What used to take us weeks now takes days, and the quality is significantly better. Our success rate has nearly doubled since we started using the platform.",
     results: "Grant success rate increased from 22% to 41%",
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
   },
   {
     name: "Angela Torres",
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     testimonial: "What impressed me most was how VoiceWeave maintained our authentic voice while helping us frame our work in ways that resonate with funders. It's like having a grant expert who really understands who we are.",
     results: "$1.2M in new funding in first year",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
   }
 ];
 
