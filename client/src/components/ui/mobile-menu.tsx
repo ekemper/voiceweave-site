@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -24,6 +25,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </Button>
       </div>
       <div className="flex flex-col p-4 space-y-4 font-montserrat text-lg">
+        <Link href="/about">
+          <a className="text-neutral-700 py-2 border-b border-neutral-200" onClick={handleLinkClick}>
+            About
+          </a>
+        </Link>
         <a href="#features" className="text-neutral-700 py-2 border-b border-neutral-200" onClick={handleLinkClick}>
           Features
         </a>
@@ -37,11 +43,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           Pricing
         </a>
         <a 
-          href="#join-waitlist" 
+          href="#demo" 
           className="font-montserrat text-white bg-primary-500 py-3 px-6 rounded-md text-center mt-4"
           onClick={handleLinkClick}
         >
-          Join Waitlist
+          Try Demo
         </a>
       </div>
     </div>
