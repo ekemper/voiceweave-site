@@ -13,14 +13,21 @@ export function formatPrice(price: number): string {
 }
 
 export function scrollToElement(elementId: string): void {
+  console.log(`Attempting to scroll to element with ID: ${elementId}`);
   const element = document.getElementById(elementId);
+  
   if (element) {
+    console.log(`Found element with ID: ${elementId}`);
+    
     // Calculate header height - adjust this value based on your header's actual height
     const headerHeight = 80;
     
     // Get element's position and adjust for header height
     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    console.log(`Element position: ${elementPosition}`);
+    
     const offsetPosition = elementPosition - headerHeight;
+    console.log(`Adjusted position after header offset: ${offsetPosition}`);
     
     // Scroll to adjusted position
     window.scrollTo({
@@ -30,6 +37,9 @@ export function scrollToElement(elementId: string): void {
     
     // Update URL hash without scrolling
     history.pushState(null, '', `#${elementId}`);
+    console.log(`Scrolled to ${offsetPosition}px and updated URL hash to #${elementId}`);
+  } else {
+    console.error(`Element with ID ${elementId} not found!`);
   }
 }
 
