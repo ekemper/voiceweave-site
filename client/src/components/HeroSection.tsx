@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/stock-photo-young-black-businesswoman-addressing-colleagues-at-a-meeting-562441603.jpg";
 
 export default function HeroSection() {
   const { ref: refText, inView: inViewText } = useScrollAnimation();
@@ -43,7 +42,7 @@ export default function HeroSection() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm"></div>
             <img 
-              src={heroImage} 
+              src="/stock-photo-young-black-businesswoman-addressing-colleagues-at-a-meeting-562441603.jpg" 
               alt="Black woman giving a presentation in a business meeting" 
               className="w-full h-auto rounded-xl object-cover border border-white/30"
               loading="lazy"
