@@ -21,10 +21,14 @@ export default function Home() {
         const targetElement = document.querySelector(href);
         if (!targetElement) return;
         
+        // Updated scroll logic to account for fixed header
         window.scrollTo({
           top: targetElement.getBoundingClientRect().top + window.scrollY,
           behavior: 'smooth'
         });
+
+        // Update URL hash without scrolling
+        history.pushState(null, '', href);
       });
     });
   }, []);

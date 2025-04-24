@@ -68,6 +68,11 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+
+  /* Fix scroll positioning for fixed header */
+  html {
+    scroll-padding-top: 80px; /* Adjust based on header height */
+  }
 }
 
 /* Custom utility classes for our color scheme */
