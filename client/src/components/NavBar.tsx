@@ -28,11 +28,8 @@ export default function NavBar() {
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8 font-montserrat">
-              <Link href="/about" className="text-navy hover:text-teal transition-colors font-medium">About</Link>
-              <a href="#features" className="text-navy hover:text-teal transition-colors font-medium">Features</a>
-              <a href="#how-it-works" className="text-navy hover:text-teal transition-colors font-medium">How It Works</a>
-              <a href="#testimonials" className="text-navy hover:text-teal transition-colors font-medium">Impact Stories</a>
-              <a href="#pricing" className="text-navy hover:text-teal transition-colors font-medium">Pricing</a>
+              <a href="#about" className="text-navy hover:text-teal transition-colors font-medium">About</a>
+              <a href="#demo" className="text-navy hover:text-teal transition-colors font-medium">Demo</a>
             </nav>
             <div>
               <Button asChild className="hidden md:inline-block font-montserrat text-white bg-amber hover:bg-amber/90 py-2 px-6 rounded-full transition-colors font-medium">

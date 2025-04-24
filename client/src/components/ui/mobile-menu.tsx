@@ -25,20 +25,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </Button>
       </div>
       <div className="flex flex-col p-4 space-y-4 font-montserrat text-lg">
-        <Link href="/about" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
+        <a href="#about" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
           About
-        </Link>
-        <a href="#features" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
-          Features
         </a>
-        <a href="#how-it-works" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
-          How It Works
-        </a>
-        <a href="#testimonials" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
-          Impact Stories
-        </a>
-        <a href="#pricing" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
-          Pricing
+        <a href="#demo" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
+          Demo
         </a>
         <a 
           href="#demo" 
