@@ -42,7 +42,7 @@ export default function HeroSection() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm"></div>
             <img 
-              src="https://images.unsplash.com/photo-1613909671501-f9678fdf8cf8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              src="https://image.shutterstock.com/image-photo/young-black-businesswoman-addressing-colleagues-600w-562441603.jpg" 
               alt="Black woman giving a presentation in a business meeting" 
               className="w-full h-auto rounded-xl object-cover border border-white/30"
               loading="lazy"
