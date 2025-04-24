@@ -74,10 +74,8 @@ export default function DemoSection() {
   
   return (
     <div>
-      {/* Anchor element for scrolling */}
-      <div id="demo" style={{ position: 'relative', top: '-80px', visibility: 'hidden', display: 'block', height: '1px' }}></div>
-      
-      <section className="py-16 md:py-24 bg-gradient-navy-teal text-white relative">
+      {/* Main section with the ID for scrolling */}
+      <section id="demo" className="py-16 md:py-24 bg-gradient-navy-teal text-white relative scroll-mt-[100px]">
         <div className="absolute inset-0 bg-wave-pattern opacity-10"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div 

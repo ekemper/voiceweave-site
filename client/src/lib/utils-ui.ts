@@ -20,24 +20,24 @@ export function scrollToElement(elementId: string): void {
     console.log(`Found element with ID: ${elementId}`);
     
     // Calculate header height - adjust this value based on your header's actual height
-    const headerHeight = 80;
+    const headerHeight = 100; // Increased to ensure we scroll far enough
     
-    // Get element's position and adjust for header height
-    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-    console.log(`Element position: ${elementPosition}`);
+    // Use a more direct approach with scrollIntoView
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
-    const offsetPosition = elementPosition - headerHeight;
-    console.log(`Adjusted position after header offset: ${offsetPosition}`);
-    
-    // Scroll to adjusted position
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
+    // Add extra adjustment after scrollIntoView for header offset
+    setTimeout(() => {
+      const currentPos = window.scrollY;
+      window.scrollTo({
+        top: currentPos - headerHeight,
+        behavior: 'smooth'
+      });
+      console.log(`Applied additional offset adjustment, scrolled to ${currentPos - headerHeight}px`);
+    }, 100);
     
     // Update URL hash without scrolling
     history.pushState(null, '', `#${elementId}`);
-    console.log(`Scrolled to ${offsetPosition}px and updated URL hash to #${elementId}`);
+    console.log(`Updated URL hash to #${elementId}`);
   } else {
     console.error(`Element with ID ${elementId} not found!`);
   }
