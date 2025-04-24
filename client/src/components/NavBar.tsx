@@ -44,18 +44,7 @@ export default function NavBar() {
             </nav>
             <div>
               <Button 
-                onClick={() => {
-                  const demoSection = document.getElementById('demo');
-                  if (demoSection) {
-                    const headerHeight = 80;
-                    const position = demoSection.getBoundingClientRect().top + window.scrollY - headerHeight;
-                    window.scrollTo({
-                      top: position,
-                      behavior: 'smooth'
-                    });
-                    history.pushState(null, '', '#demo');
-                  }
-                }}
+                onClick={() => scrollToElement('demo')}
                 className="hidden md:inline-block font-montserrat text-white bg-amber hover:bg-amber/90 py-2 px-6 rounded-full transition-colors font-medium"
               >
                 Try Demo

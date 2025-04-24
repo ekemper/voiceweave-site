@@ -2,43 +2,12 @@ import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import DemoSection from "@/components/DemoSection";
 import Footer from "@/components/Footer";
-import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export default function Home() {
   const { ref: refAbout, inView: inViewAbout } = useScrollAnimation();
 
-  // Smooth scroll implementation
-  useEffect(() => {
-    // Add smooth scrolling to all links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
-        e.preventDefault();
-        
-        const href = this.getAttribute('href');
-        if (!href) return;
-        
-        const targetElement = document.querySelector(href);
-        if (!targetElement) return;
-        
-        // Calculate header height - adjust this value based on your header's actual height
-        const headerHeight = 80; 
-        
-        // Get element's position and adjust for header height
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerHeight;
-        
-        // Scroll to adjusted position
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-
-        // Update URL hash without scrolling
-        history.pushState(null, '', href);
-      });
-    });
-  }, []);
+  // We're now handling smooth scrolling with dedicated handlers using the scrollToElement utility function
   
   return (
     <div className="min-h-screen bg-gray-custom">

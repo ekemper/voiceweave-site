@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { scrollToElement } from "@/lib/utils-ui";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -28,17 +29,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <button 
           className="text-navy py-2 border-b border-gray text-left bg-transparent"
           onClick={() => {
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-              const headerHeight = 80;
-              const position = aboutSection.getBoundingClientRect().top + window.scrollY - headerHeight;
-              window.scrollTo({
-                top: position,
-                behavior: 'smooth'
-              });
-              history.pushState(null, '', '#about');
-              handleLinkClick();
-            }
+            scrollToElement('about');
+            handleLinkClick();
           }}
         >
           About
@@ -46,17 +38,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <button 
           className="text-navy py-2 border-b border-gray text-left bg-transparent"
           onClick={() => {
-            const demoSection = document.getElementById('demo');
-            if (demoSection) {
-              const headerHeight = 80;
-              const position = demoSection.getBoundingClientRect().top + window.scrollY - headerHeight;
-              window.scrollTo({
-                top: position,
-                behavior: 'smooth'
-              });
-              history.pushState(null, '', '#demo');
-              handleLinkClick();
-            }
+            scrollToElement('demo');
+            handleLinkClick();
           }}
         >
           Demo
@@ -64,17 +47,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <button 
           className="font-montserrat text-white bg-amber py-3 px-6 rounded-md text-center mt-4"
           onClick={() => {
-            const demoSection = document.getElementById('demo');
-            if (demoSection) {
-              const headerHeight = 80;
-              const position = demoSection.getBoundingClientRect().top + window.scrollY - headerHeight;
-              window.scrollTo({
-                top: position,
-                behavior: 'smooth'
-              });
-              history.pushState(null, '', '#demo');
-              handleLinkClick();
-            }
+            scrollToElement('demo');
+            handleLinkClick();
           }}
         >
           Try Demo
