@@ -21,9 +21,16 @@ export default function Home() {
         const targetElement = document.querySelector(href);
         if (!targetElement) return;
         
-        // Updated scroll logic to account for fixed header
+        // Calculate header height - adjust this value based on your header's actual height
+        const headerHeight = 80; 
+        
+        // Get element's position and adjust for header height
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerHeight;
+        
+        // Scroll to adjusted position
         window.scrollTo({
-          top: targetElement.getBoundingClientRect().top + window.scrollY,
+          top: offsetPosition,
           behavior: 'smooth'
         });
 

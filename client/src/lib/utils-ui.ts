@@ -15,9 +15,21 @@ export function formatPrice(price: number): string {
 export function scrollToElement(elementId: string): void {
   const element = document.getElementById(elementId);
   if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
+    // Calculate header height - adjust this value based on your header's actual height
+    const headerHeight = 80;
+    
+    // Get element's position and adjust for header height
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerHeight;
+    
+    // Scroll to adjusted position
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
     });
+    
+    // Update URL hash without scrolling
+    history.pushState(null, '', `#${elementId}`);
   }
 }
 

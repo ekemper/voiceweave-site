@@ -71,7 +71,8 @@
 
   /* Fix scroll positioning for fixed header */
   html {
-    scroll-padding-top: 80px; /* Adjust based on header height */
+    scroll-padding-top: 80px; /* Set to match the header height used in Home.tsx */
+    scroll-behavior: smooth;
   }
 }
 

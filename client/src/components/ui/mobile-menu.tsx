@@ -25,19 +25,60 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </Button>
       </div>
       <div className="flex flex-col p-4 space-y-4 font-montserrat text-lg">
-        <a href="#about" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
+        <button 
+          className="text-navy py-2 border-b border-gray text-left bg-transparent"
+          onClick={() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              const headerHeight = 80;
+              const position = aboutSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+              window.scrollTo({
+                top: position,
+                behavior: 'smooth'
+              });
+              history.pushState(null, '', '#about');
+              handleLinkClick();
+            }
+          }}
+        >
           About
-        </a>
-        <a href="#demo" className="text-navy py-2 border-b border-gray" onClick={handleLinkClick}>
+        </button>
+        <button 
+          className="text-navy py-2 border-b border-gray text-left bg-transparent"
+          onClick={() => {
+            const demoSection = document.getElementById('demo');
+            if (demoSection) {
+              const headerHeight = 80;
+              const position = demoSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+              window.scrollTo({
+                top: position,
+                behavior: 'smooth'
+              });
+              history.pushState(null, '', '#demo');
+              handleLinkClick();
+            }
+          }}
+        >
           Demo
-        </a>
-        <a 
-          href="#demo" 
+        </button>
+        <button 
           className="font-montserrat text-white bg-amber py-3 px-6 rounded-md text-center mt-4"
-          onClick={handleLinkClick}
+          onClick={() => {
+            const demoSection = document.getElementById('demo');
+            if (demoSection) {
+              const headerHeight = 80;
+              const position = demoSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+              window.scrollTo({
+                top: position,
+                behavior: 'smooth'
+              });
+              history.pushState(null, '', '#demo');
+              handleLinkClick();
+            }
+          }}
         >
           Try Demo
-        </a>
+        </button>
       </div>
     </div>
   );

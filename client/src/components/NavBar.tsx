@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import MobileMenu from "@/components/ui/mobile-menu";
 import { Link } from "wouter";
+import { scrollToElement } from "@/lib/utils-ui";
 
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,12 +29,36 @@ export default function NavBar() {
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8 font-montserrat">
-              <a href="#about" className="text-navy hover:text-teal transition-colors font-medium">About</a>
-              <a href="#demo" className="text-navy hover:text-teal transition-colors font-medium">Demo</a>
+              <button 
+                onClick={() => scrollToElement('about')}
+                className="text-navy hover:text-teal transition-colors font-medium bg-transparent border-none cursor-pointer"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => scrollToElement('demo')}
+                className="text-navy hover:text-teal transition-colors font-medium bg-transparent border-none cursor-pointer"
+              >
+                Demo
+              </button>
             </nav>
             <div>
-              <Button asChild className="hidden md:inline-block font-montserrat text-white bg-amber hover:bg-amber/90 py-2 px-6 rounded-full transition-colors font-medium">
-                <a href="#demo">Try Demo</a>
+              <Button 
+                onClick={() => {
+                  const demoSection = document.getElementById('demo');
+                  if (demoSection) {
+                    const headerHeight = 80;
+                    const position = demoSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+                    window.scrollTo({
+                      top: position,
+                      behavior: 'smooth'
+                    });
+                    history.pushState(null, '', '#demo');
+                  }
+                }}
+                className="hidden md:inline-block font-montserrat text-white bg-amber hover:bg-amber/90 py-2 px-6 rounded-full transition-colors font-medium"
+              >
+                Try Demo
               </Button>
               <Button
                 variant="ghost"
