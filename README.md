@@ -1,6 +1,6 @@
-# VoiceWeave
+# VoiceAmp
 
-VoiceWeave is an AI-powered grant writing assistant designed to empower mission-driven organizations to craft compelling grant applications that reflect their authentic voice.
+VoiceAmp is an AI-powered grant writing assistant designed to empower mission-driven organizations to craft compelling grant applications that reflect their authentic voice.
 
 ## Features
 
@@ -20,8 +20,8 @@ VoiceWeave is an AI-powered grant writing assistant designed to empower mission-
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ekemper/voiceweave-site.git
-cd voiceweave-site
+git clone https://github.com/ekemper/voiceamp-site.git
+cd voiceamp-site
 ```
 
 2. Install dependencies:

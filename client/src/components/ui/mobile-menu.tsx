@@ -44,15 +44,6 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         >
           Demo
         </button>
-        <button 
-          className="font-montserrat text-white bg-amber py-3 px-6 rounded-md text-center mt-4"
-          onClick={() => {
-            scrollToElement('demo');
-            handleLinkClick();
-          }}
-        >
-          Try Demo
-        </button>
       </div>
     </div>
   );

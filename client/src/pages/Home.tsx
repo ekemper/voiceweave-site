@@ -1,5 +1,4 @@
 import NavBar from "@/components/NavBar";
-import HeroSection from "@/components/HeroSection";
 import DemoSection from "@/components/DemoSection";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -13,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-custom">
       <NavBar />
       <main>
-        <HeroSection />
+        <DemoSection />
         
         {/* About Section */}
         <section id="about" className="py-16 md:py-24 bg-white">
@@ -26,12 +25,12 @@ export default function Home() {
             >
               <div className="flex items-center justify-center mb-8">
                 <div className="h-0.5 bg-teal/30 w-16"></div>
-                <h2 className="text-3xl font-bold text-teal px-4 font-playfair">Our Mission</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-teal px-4 font-playfair tracking-tight">Our Mission</h2>
                 <div className="h-0.5 bg-teal/30 w-16"></div>
               </div>
               
               <p className="text-lg text-navy mb-8 leading-relaxed">
-                VoiceWeave is an AI-powered platform designed to empower mission-driven organizations to craft compelling grant applications that reflect their authentic voice. By combining natural language intelligence with a deep understanding of funding landscapes, VoiceWeave helps nonprofits weave together data, impact stories, and civic purpose — faster, smarter, and with greater resonance.
+                VoiceAmp is an AI-powered platform designed to empower mission-driven organizations to craft compelling grant applications that reflect their authentic voice. By combining natural language intelligence with a deep understanding of funding landscapes, VoiceAmp helps nonprofits amplify data, impact stories, and civic purpose — faster, smarter, and with greater resonance.
               </p>
               
               <p className="text-lg text-navy mb-8 leading-relaxed">
@@ -40,7 +39,7 @@ export default function Home() {
 
               <div className="flex items-center justify-center my-12">
                 <div className="h-0.5 bg-amber/30 w-16"></div>
-                <h2 className="text-3xl font-bold text-amber px-4 font-playfair">Our Vision</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-amber px-4 font-playfair tracking-tight">Our Vision</h2>
                 <div className="h-0.5 bg-amber/30 w-16"></div>
               </div>
               
@@ -66,8 +65,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        <DemoSection />
       </main>
       <Footer />
     </div>

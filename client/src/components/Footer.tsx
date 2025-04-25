@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <div className="text-2xl font-bold font-playfair mb-4">
               <span className="text-white">Voice</span>
-              <span className="text-teal">Weave</span>
+              <span className="text-teal">Amp</span>
             </div>
             <p className="text-gray-custom mb-6 max-w-md">
               Amplifying voices. Streamlining grants. Making funding more accessible for mission-driven organizations.
@@ -38,7 +38,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-custom mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} VoiceWeave. All rights reserved.
+            &copy; {new Date().getFullYear()} VoiceAmp. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-custom hover:text-teal transition-colors">Privacy Policy</a>
